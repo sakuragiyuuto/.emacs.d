@@ -28,3 +28,9 @@
 
 ;; 釣合う括弧をハイライトする
 (show-paren-mode 1)
+
+;;; 右から左に読む言語に対応させないことで描画高速化(ex.アラビア文字)
+(setq-default bidi-display-reordering nil)
+
+;; ウィンドウを透明にする.アクティブウィンドウ/非アクティブウィンドウ(alphaの値で透明度を指定)
+(add-to-list 'default-frame-alist '(alpha . (0.85 0.85)))

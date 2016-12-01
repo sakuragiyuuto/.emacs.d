@@ -11,3 +11,6 @@
 
 ;; 終了時にオートセーブファイルを消す
 (setq delete-auto-save-files t)
+
+;; 自動保存ファイルのリストファイルを作らない
+(setq auto-save-list-file-prefix nil)
