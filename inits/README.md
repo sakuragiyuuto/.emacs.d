@@ -4,6 +4,37 @@
 40-50 programming preference
 51-   nothing
 
+## 00-09
+- 00_XX.el: startup proc
+  - bg_proc
+  - package
+  - key_binding
+  - backup
+- 01_XX.el: display
+  - window
+  - modeline
+  - whitespace
+
+- 02_XX.el: device
+  - printer
+
+- 05_XX.el: display package
+  - minimap
+  - tabbar
+
+## 30-39
+- 30_XX.el: basic mode settings
+  - markdown
+
+## 40-49
+- 40_XX.el: pre programming settings
+  - auto_complete
+
+## 50-
+- 50_XX.el: programming mode settings
+
+
+
 # add init loader
 be careful for numbers.
 Don't overlap a number.
@@ -12,6 +43,8 @@ If you select overlapping number, it is conflict when merging.
 If you make a new .el file,
 for example, you name XX-hoge.
 X is a 0-9 digits. hoge is init loader name.
+
+
 
 # reference
 - [emacsの設定その１Add Star](http://d.hatena.ne.jp/yano-htn/20120211/1328968875)

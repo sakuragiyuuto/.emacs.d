@@ -10,5 +10,8 @@
 ;;; ミニバッファ履歴を次回Emacs起動時にも保存する
 (savehist-mode 1)
 
+;; スタートアップメッセージを表示しない
+(setq inhibit-startup-message t)
+
 ;;; yes or noをy or n
 (fset 'yes-or-no-p 'y-or-n-p)

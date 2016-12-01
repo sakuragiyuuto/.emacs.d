@@ -1,0 +1,5 @@
+;;;
+;;; minimap
+;;;
+
+(require 'minimap)

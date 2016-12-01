@@ -6,6 +6,7 @@
 ;;  - http://blog.bokuweb.me/entry/emcas-nyumon
 ;;  - http://keisanbutsuriya.hateblo.jp/entry/2015/11/22/214457
 
+(package-initialize)
 (require 'tabbar)
 (tabbar-mode)
 
