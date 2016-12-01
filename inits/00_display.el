@@ -3,13 +3,6 @@
 ;; スタートアップメッセージを表示しない
 (setq inhibit-startup-message t)
 
-;; モードラインに時刻を表示する
-(display-time)
-
-;; モードラインに行番号・桁番号を表示する
-(line-number-mode 1)
-(column-number-mode 1)
-
 ;; メニューバーとツールバーとスクロールバーを消す
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -34,3 +27,9 @@
 
 ;; ウィンドウを透明にする.アクティブウィンドウ/非アクティブウィンドウ(alphaの値で透明度を指定)
 (add-to-list 'default-frame-alist '(alpha . (0.85 0.85)))
+
+;; 1行ずつスクロール
+(setq scroll-conservatively 35
+      scroll-margin 0
+      scroll-step 1)
+(setq comint-scroll-show-maximum-output t) ;; shell-mode

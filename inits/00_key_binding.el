@@ -1,3 +1,4 @@
+;;; valid
 ;; backspace -> ctrl+h
 (global-set-key (kbd "C-h") 'delete-backward-char)
 
@@ -9,3 +10,8 @@
 
 ;; indent-region -> ctrl+x ctrl+i
 (define-key global-map (kbd "C-x C-i") 'indent-region)
+
+
+;;; invalid
+;; globalなC-zを無効化
+(global-unset-key "\C-z")
