@@ -19,11 +19,9 @@
 (setq frame-title-format "%f")
 
 ;; バッファの左側に行番号を表示する
-(global-nlinum-mode t)
-(set-face-attribute 'linum nil
-                    :foreground "#BBB"
-                    :height 0.9)
-(setq nlinum-format "%4d"); 5 桁分の表示領域を確保する
+(require 'linum)
+(global-linum-mode t)
+(setq linum-format "%4d ")
 
 ;; 現在行に色をつける
 (global-hl-line-mode 1)
