@@ -19,10 +19,11 @@ X is a 0-9 digits. hoge is init loader name.
 - [Emacsから印刷する設定](http://tam5917.hatenablog.com/entry/20120914/1347600433)
 
 # reflect in some day
+- [るびきち新生日刊Emacs](http://emacs.rubikitch.com/)
 - [年末emacs設定大掃除をして、これは捨てられないと思った設定書いてく](http://blog.shibayu36.org/entry/2012/12/29/001418)
 - [init.el読書会](http://emacs-jp.github.io/reading-initel)
 
-- [Emacsでキーバインドをカスタマイズするための覚書Add Star](http://d.hatena.ne.jp/gan2/20080109/1199887209)
+- [Emacsでキーバインドをカスタマイズするための覚書](http://d.hatena.ne.jp/gan2/20080109/1199887209)
 
 - [キーバインディング - 環境設定のための Emacs Lisp 入門 ](http://yohshiy.blog.fc2.com/blog-entry-271.html)
 
