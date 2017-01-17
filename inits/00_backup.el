@@ -6,6 +6,9 @@
 ;; .#* のバックアップファイルを作らない
 (setq auto-save-default nil)
 
+;; 自動保存ファイルのリストファイルを無効にする
+(setq auto-save-list-file-prefix nil)
+
 ;; lockファイルを作らない
 (setq create-lockfiles nil)
 

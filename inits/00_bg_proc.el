@@ -1,3 +1,5 @@
+(set-default-font "Ubuntu Mono 11")
+
 ;;; GCを減らして軽くする
 (setq gc-cons-threshold (* 10 gc-cons-threshold))
 

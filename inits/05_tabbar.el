@@ -1,5 +1,3 @@
-;; -------------------------------------------------------------------------
-;;
 ;; tabbar
 ;; (install-elisp "http://www.emacswiki.org/emacs/download/tabbar.el")
 ;; Reference:
@@ -28,23 +26,26 @@
 
 
 ;;----- タブのセパレーターの長さ
-(setq tabbar-separator '(2.0))
+(setq tabbar-separator '(1.0))
 
 
 ;;----- タブの色（CUIの時。GUIの時は後でカラーテーマが適用）
 (set-face-attribute
  'tabbar-default nil
- :background "brightblue"
- :foreground "blue"
+ :family "Ubuntu Mono"
+ :background "RoyalBlue3"
+ :foreground "light sky blue"
  )
 (set-face-attribute
  'tabbar-selected nil
+ :family "Ubuntu Mono"
  :background "#ff5f00"
  :foreground "brightwhite"
  :box nil
  )
 (set-face-attribute
  'tabbar-modified nil
+ :family "Ubuntu Mono"
  :background "brightred"
  :foreground "brightwhite"
  :box nil

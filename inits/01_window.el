@@ -15,7 +15,7 @@
 (setq-default bidi-display-reordering nil)
 
 ; ウィンドウを透明にする.アクティブウィンドウ/非アクティブウィンドウ(alphaの値で透明度を指定)
-(add-to-list 'default-frame-alist '(alpha . (0.85 0.85)))
+(add-to-list 'default-frame-alist '(alpha . (0.80 0.60)))
 
 ; 1行ずつスクロール
 (setq scroll-conservatively 35
@@ -34,3 +34,11 @@
 
 ; 釣合う括弧をハイライトする
 (show-paren-mode 1)
+
+;; Please set your themes directory to 'custom-theme-load-path
+(add-to-list 'custom-theme-load-path
+             (file-name-as-directory "~/.emacs.d/replace-colorthemes/dark-blue2-theme.el"))
+
+;; load your favorite theme
+(load-theme 'dark-blue2 t t)
+(enable-theme 'dark-blue2)
