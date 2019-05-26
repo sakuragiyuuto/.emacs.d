@@ -1,4 +1,4 @@
-; package
+;;; init.el ends here
 (package-initialize)
 (require 'package)
 (setq package-archives
@@ -26,16 +26,16 @@
 (column-number-mode 1)
 ;;(menu-bar-mode -1)
 (tool-bar-mode -1)
-;;(scroll-bar-mode -1)
+(scroll-bar-mode -1)
 ;;(set-scroll-bar-mode 'right)
 (setq frame-title-format "%f") ;; display file full path on title
 (require 'linum)
 (global-linum-mode t)
 (setq linum-format "%4d ")
-(global-hl-line-mode 1) ;; current line colored
+;;(global-hl-line-mode 1) ;; current line colored
 (show-paren-mode 1) ;; paren high light
 ;; window transparent. active/non-active(alpha value)
-(add-to-list 'default-frame-alist '(alpha . (0.85 0.85)))
+;;(add-to-list 'default-frame-alist '(alpha . (0.85 0.85)))
 ;; font type
 ;;(font-spec :family "Cica" :size 14)
 
@@ -47,3 +47,32 @@
 (setq message-log-max 10000) ;; log maximum
 (setq history-length 1000) ;; history max
 (savehist-mode 1) ;; mini buffer log
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (irony paradox))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+; c++
+(add-hook 'c++-mode-hook 'irony-mode)
+(require 'autoinsert)
+
+(require 'hl-line)
+;;; hl-lineを無効にするメジャーモードを指定する
+(defvar global-hl-line-timer-exclude-modes '(todotxt-mode))
+(defun global-hl-line-timer-function ()
+  (unless (memq major-mode global-hl-line-timer-exclude-modes)
+    (global-hl-line-unhighlight-all)
+    (let ((global-hl-line-mode t))
+      (global-hl-line-highlight))))
+(setq global-hl-line-timer
+      (run-with-idle-timer 0.03 t 'global-hl-line-timer-function))
+;; (cancel-timer global-hl-line-timer)
